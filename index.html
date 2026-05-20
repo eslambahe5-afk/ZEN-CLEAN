@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIN CLEAN - زي نظيف لخدمة التنظيف والأمان</title>
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --bg-dark: #020617;
+            --bg-card: #0f172a;
+            --primary: #2563eb;
+            --accent: #3b82f6;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-cairo">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container flex-between">
+            <div class="logo">
+                <i class="fa-solid fa-sparkles text-blue-500 text-2xl"></i>
+                <span class="text-xl font-bold">ZIN CLEAN</span>
+            </div>
+            <ul class="nav-links hidden-mobile">
+                <li><a href="#home" class="active">الرئيسية</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="admin.html" class="btn-admin">لوحة التحكم</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">ننظم بيتك.. <br> <span class="text-blue-500">وأنظف حد بيشوفك</span></h1>
+                <p class="hero-subtitle">خدمة تنظيف احترافية بأحدث الأجهزة، مع ضمان أمني كامل للموظفين المسجلين.</p>
+                <a href="#request-form" class="btn-primary animate-float">اطلب الخدمة دلوقتي</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1581578731117-10d52143b0e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cleaning Service" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">إيه اللي بنقدمه؟</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-house-signal"></i>
+                    </div>
+                    <h3>تنظيف شامل للمنازل</h3>
+                    <p>تنظيف كامل لكل ركن في البيت، شفاف وتلقب.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h3>غسيل وتنظيف مفروشات</h3>
+                    <p>كنزك، خزانة، وطاولات.. بنكشف عليها من الجذور.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-shield-alt"></i>
+                    </div>
+                    <h3>نظافة بأمان تام</h3>
+                    <p>عمالنا مسجلين في منظومة، ومحدش يخدش يده في حاجة تانية غير اللي شغل.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3>تنظيف مكاتب وشركات</h3>
+                    <p>بيئة عمل نظيفة تزيد إنتاجية الموظفين بتاعتك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Form Section -->
+    <section id="request-form" class="request-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2 class="section-title">طلب خدمة</h2>
+                <p class="text-center">املأ البيانات وبنسجل عندك الطلب، وهنتواصل معاك في أسرع وقت.</p>
+                
+                <form id="serviceForm" class="request-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>الاسم بالكامل</label>
+                            <input type="text" id="name" placeholder="أحمد محمد" required>
+                        </div>
+                        <div class="form-group">
+                            <label>رقم التليفون</label>
+                            <input type="tel" id="phone" placeholder="010xxxxxxxx" required>
+                        </div>
+                        <div class="form-group">
+                            <label>نوع الخدمة</label>
+                            <select id="serviceType">
+                                <option value="homecleaning">تنظيف منزل</option>
+                                <option value="furniture">غسيل مفروشات/كنب</option>
+                                <option value="office">تنظيف مكتب</option>
+                                <option value="general">تنظيف عام (Post-construction)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>العنوان</label>
+                            <input type="text" id="address" placeholder="المنطقة، شارع، رقم المبنى" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>ملاحظات إضافية (اختياري)</label>
+                        <textarea id="notes" rows="3" placeholder="اكتب أي تفاصيل إضافية هنا..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full text-lg py-3">إرسال الطلب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>اتصل بنا</h4>
+                            <a href="tel:01026360070">01026360070</a>
+                            <a href="tel:01271710022">01271710022</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>الموقع</h4>
+                        <p>خدمة شاملة في جميع المناطق</p>
+                    </div>
+                </div>
+                <div class="whatsapp-box">
+                    <a href="https://wa.me/201508884598?text=Message%20ZIN%20CLEAN%20on%20WhatsApp" target="blank" class="btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>راسلنا واتساب</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Map Embed -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.953468279376!2d31.2357!3d30.0444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458419254393161%3A0x7d604e5c4f800612!2sCairo%2C%20Egypt!5e0!3m2!1sen!2seg!4v1689382445123!5m2!1sen!2seg" 
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ZIN CLEAN. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
